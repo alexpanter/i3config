@@ -212,6 +212,7 @@ mode "$mode_launcher" {
   bindsym s exec spotify
   bindsym t exec thunar
   bindsym r exec redshift-gtk
+  bindsym c exec /home/alexander/bin/calendar
 
   bindsym Escape mode "default"
   bindsym Return mode "default"
@@ -233,3 +234,11 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/games.jpg
 
 # quick pause button
 bindsym $mod+p exec pause
+
+# gnome session (wifi, battery, bluetooth control, etc.)
+exec_always --no-startup-id gnome-session
+exec_always nm-applet
+
+# mod+alt+(left|right) to switch to next/previous workspace
+bindsym $mod+Ctrl+Right workspace next_on_output
+bindsym $mod+Ctrl+Left workspace prev_on_output
